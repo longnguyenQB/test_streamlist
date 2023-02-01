@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  scf:
+    image: streamlit-sensitive-content-filter:1.0.2
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - 10020:69
+    container_name: streamlit-sensitive-content-filter
